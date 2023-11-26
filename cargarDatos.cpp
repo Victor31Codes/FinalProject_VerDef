@@ -48,10 +48,8 @@ void cargarDatos_empleados(const string& nombreArchivo, Lista<Empleado>& lista_e
                 // Calcular la edad y almacenarla
                 nuevo_empleado.edad=calcularEdad(nuevo_empleado.fecha_nac_empleado);
                 if(nuevo_empleado.tiene_hijos=='S'){
-                	cout<<nuevo_empleado.nombre_empleado<<endl;
+                	//cout<<nuevo_empleado.nombre_empleado<<endl;
 					nuevo_empleado.hijos=agregarHijos(nuevo_empleado.id_empleado, lista_hijos);
-				}else{
-					nuevo_empleado.tiene_hijos==NULL;
 				}
                 lista_empleados.insertar_final(nuevo_empleado);
             } else {
@@ -109,59 +107,10 @@ Lista<Hijo> agregarHijos(int id_empleado, Lista<Hijo>& lista_hijos){
 	while (actual_hijo!= nullptr) {
 		if(actual_hijo->Dato.id_empleado==id_empleado){
 			hijoxempleado.insertar_final(actual_hijo->Dato);
-			cout<<"	"<<actual_hijo->Dato.id_empleado<<" "<<actual_hijo->Dato.nombre_hijo<<endl;
+			//cout<<"	"<<actual_hijo->Dato.id_empleado<<" "<<actual_hijo->Dato.nombre_hijo<<endl;
 		}
 		actual_hijo=actual_hijo->sig;
 	}
 	return hijoxempleado;
 }
 
-void clasificarhijos(Lista<Hijo>& lista_hijos){
-	Lista<Hijo> lista_hijos05;
-	Lista<Hijo> lista_hijos610;
-	Lista<Hijo> lista_hijos1115;
-	Lista<Hijo> lista_hijos15;
-	Lista<Hijo> lista_hijo_rangos;
-	nodo<Hijo>* actual_hijo = lista_hijos.obtener_cabecera();
-	while (actual_hijo!= nullptr) {
-		if (actual_hijo->Dato.edad>=0&&actual_hijo->Dato.edad<=5){
-			lista_hijos05.insertar_final(actual_hijo->Dato);
-		}else if(actual_hijo->Dato.edad>=6&&actual_hijo->Dato.edad<=10){
-			lista_hijos610.insertar_final(actual_hijo->Dato);
-		}else if(actual_hijo->Dato.edad>=11&&actual_hijo->Dato.edad<=15){
-			lista_hijos1115.insertar_final(actual_hijo->Dato);
-		}else if(actual_hijo->Dato.edad>15){
-			lista_hijos15.insertar_final(actual_hijo->Dato);
-		}
-		actual_hijo = actual_hijo->sig;
-	}
-	Lista<Lista<Hijo>> lista_rango_hijos;
-	lista_rango_hijos.insertar_final(lista_hijos05);
-    lista_rango_hijos.insertar_final(lista_hijos610);
-    lista_rango_hijos.insertar_final(lista_hijos1115);
-    lista_rango_hijos.insertar_final(lista_hijos15);
-	nodo<Hijo>* aux = lista_hijos05.obtener_cabecera();
-    while (aux!= nullptr) {
-        cout << "ID: " << aux->Dato.id_hijo << ", Nombre: " << aux->Dato.nombre_hijo
-             << ", Edad: " << aux->Dato.edad<<endl;
-        aux = aux->sig;
-    }
-    aux = lista_hijos610.obtener_cabecera();
-    while (aux!= nullptr) {
-        cout << "ID: " << aux->Dato.id_hijo << ", Nombre: " << aux->Dato.nombre_hijo
-             << ", Edad: " << aux->Dato.edad <<endl;
-        aux = aux->sig;
-    }
-    aux = lista_hijos1115.obtener_cabecera();
-    while (aux!= nullptr) {
-        cout << "ID: " << aux->Dato.id_hijo << ", Nombre: " << aux->Dato.nombre_hijo
-             << ", Edad: " << aux->Dato.edad <<endl;
-        aux = aux->sig;
-    }
-    aux = lista_hijos15.obtener_cabecera();
-    while (aux!= nullptr) {
-        cout << "ID: " << aux->Dato.id_hijo << ", Nombre: " << aux->Dato.nombre_hijo
-             << ", Edad: " << aux->Dato.edad <<endl;
-        aux = aux->sig;
-    }
-}

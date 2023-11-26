@@ -10,48 +10,7 @@
 #include "sucursal.h"
 
 using namespace std;
-/*
-void imprimirMenuPrincipal(){
-	cout<<" BIENVINIDO INGRESE EL NUMERO DE LA OPCIÓN QUE DESEA REALIZAR"<<endl;
-	cout<<" 1. Consultar\n2. Crear\n";
-	int opc;
-	cin>>opc;
-	switch (opc) {
-        case 1:
-            ImprimirSubmenuConsultar();
-            break;
-        case 2:
-            cout << "Ha seleccionado la opción B." <<endl;
-            break;
-        case 3:
-            cout << "Ha seleccionado la opción C." <<endl;
-            break;
-        default:
-            cout << "La opción no es válida." <<endl;
-            break;
-    }
-}
 
-void ImprimirSubmenuConsultar(){
-	cout<<"¿QUÉ DESEAS CONSULTAR?"<<endl;
-	cout<<" 1. Consultar\n2. Crear\n";
-	int opc;
-	cin>>opc;
-	switch (opc) {
-        case 1:
-            cout << "Ha seleccionado la opción A." <<endl;
-            break;
-        case 2:
-            cout << "Ha seleccionado la opción B." <<endl;
-            break;
-        case 3:
-            cout << "Ha seleccionado la opción C." <<endl;
-            break;
-        default:
-            cout << "La opción no es válida." <<endl;
-            break;
-    }
-}*/
 int calcularEdad(string fecha_nac) {
     int edad=0;
 	auto ahora = chrono::system_clock::now();
