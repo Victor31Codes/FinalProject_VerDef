@@ -1,0 +1,10 @@
+1 1 BogCentro Calle46#3 Chapinero Alejandro
+1 2 BogSur Carrera9#49sur Molinos Sara
+4 3 BarCentro Carrara64#32 Valle Adriana
+5 4 CarNorte Calle3#33 España Gabriel
+6 5 BucSur Carrera17#64 Victoria Sofia
+7 6 VilEste Calle52#32 Dosmil Andres
+8 7 IbaCentro Carrera6#68 Orquideas Natalia
+9 8 PerOeste Diagonal16#7 Turin Martin
+10 9 PasNorte Avenida32#8 Caicedo Valentina
+2 10 MedEste Diagonal78#40 Robledo Laura

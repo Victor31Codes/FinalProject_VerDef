@@ -1,0 +1,13 @@
+1 1 Jhon Martinez CC 1234567891 M 987456321 1594873 jmartinez@correo.gmail 15-05-1984 Bogota Colombia Bogota Calle58#14 Chapinero Artes S 2 BogCentro
+2 2 Eugenio Gomez CC 1234567892 M 987456322 1594874 egomez@correo.gmail 12-07-1990 Medellin Colombia Bogota Calle78#12 Bosa Ingenieria S 1 BogSur
+2 3 Sara Ramirez CC 1234567893 F 987456323 1594875 sramirez@correo.gmail 18-04-1982 Medellin Colombia Bogota Calle88#2 Teusaquillo Medicina N 0 BogSur
+3 4 Adriana Torres CC 1234567804 F 987456334 1594886 atorres@correo.gmail 03-06-1986 Barranquilla Colombia Barranquilla Calle198#50 Cevillar Ventas S 2 BarCentro
+4 5 Gabriel Lopez CC 1234567805 M 987456335 1594887 glopez@correo.gmail 20-10-1994 Cartagena Colombia Cartagena Calle208#55 Manga Compras N 0 CarNorte
+5 6 Sofia Ramirez CC 1234567806 F 987456336 1594888 sramirez@correo.gmail 11-09-1981 Bucaramanga Colombia Bucaramanga Calle218#60 Candiles Tecnologia S 3 BucSur
+6 7 Andres Diaz CC 1234567807 M 987456337 1594889 adiaz@correo.gmail 26-12-1989 Villavicencio Colombia Villavicencio Calle228#65 Galán Logistica S 1 VilEste
+7 8 Natalia Castro CC 1234567808 F 987456338 1594890 ncastro@correo.gmail 09-07-1996 Ibague Colombia Ibague Calle238#70 Salado RecursosHumanos N 0 IbaCentro
+8 9 Martin Ruiz CC 1234567809 M 987456339 1594891 mruiz@correo.gmail 14-02-1987 Pereira Colombia Pereira Calle248#75 Cuba Compras S 2 PerOeste
+9 10 Valentina Gomez CC 1234567810 F 987456340 1594892 vgomez@correo.gmail 07-05-1990 Pasto Colombia Pasto Calle258#80 Aranda Contabilidad S 3 PasNorte
+2 11 Oscar Perez CC 1234567811 M 987456341 1594893 operez@correo.gmail 23-11-1985 Bogota Colombia Bogota Calle268#85 Tunal Produccion S 4 BogSur
+10 12 Laura Diaz CC 1234567812 F 987456342 1594894 ldiaz@correo.gmail 10-01-1991 Medellin Colombia Medellin Calle278#90 Sabaneta Calidad N 0 MedEste
+1 13 Alejandro Castro CC 1234567813 M 987456343 1594895 acastro@correo.gmail 08-11-1983 Bogota Colombia Bogota Calle288#95 Chapinero Artes S 1 BogCentro
