@@ -1,6 +1,8 @@
 #ifndef SUCURSAL_H
 #define SUCURSAL_H
 
+#include "string"
+
 using namespace std;
 
 class Sucursal {

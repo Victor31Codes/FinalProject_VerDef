@@ -51,7 +51,8 @@ void cargarDatos_empleados(const string& nombreArchivo, Lista<Empleado>& lista_e
                 	cout<<nuevo_empleado.nombre_empleado<<endl;
 					nuevo_empleado.hijos=agregarHijos(nuevo_empleado.id_empleado, lista_hijos);
 				}else{
-					nuevo_empleado.tiene_hijos==NULL;
+					nuevo_empleado.tiene_hijos=='N';
+					
 				}
                 lista_empleados.insertar_final(nuevo_empleado);
             } else {
