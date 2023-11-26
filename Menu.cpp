@@ -10,7 +10,7 @@ class Menu {
 	
 	int Opcion;
 //	Sucursal
-	Empleado empleado;
+//	Empleado empleado;
 	
 	// Menus disponbles:
 	
@@ -95,8 +95,7 @@ class Menu {
 					switch (Opcion) {
 						case 1: {
 							// insertar empleado
-							Empleado empleado;
-							empleado.llenarFormulario();
+							cout << "Agregar alguien";
 							break;
 						}
 						case 2: {
