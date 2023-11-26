@@ -13,7 +13,7 @@ using namespace std;
 void cargarDatos_hijos(const string& nombreArchivo, Lista<Hijo>& lista_hijos);
 void cargarDatos_empleados(const string& nombreArchivo, Lista<Empleado>& lista_empleados, Lista<Hijo>& lista_hijos);
 void cargarDatos_ciudades(const string& nombreArchivo, Lista<Ciudad>& lista_ciudades);
-void cargarDatos_sucursales(const string& nombreArchivo, Lista<Sucursal>& lista_sucursales);
+void cargarDatos_sucursales(const string& nombreArchivo, Lista<Sucursal>& lista_sucursales,Lista<Empleado>& lista_empleados);
 void empleadoxsucursal(Lista<Sucursal>& lista_sucursales, Lista<Empleado>& lista_empleados);
 
 
@@ -25,19 +25,6 @@ int main(int argc, char** argv) {
 	while (actual_ciudad != nullptr) {
 	        cout << actual_ciudad->Dato.nombre_ciudad<< endl;
 	    actual_ciudad = actual_ciudad->sig;
-    }*/
-    
-    Lista<Sucursal> lista_sucursales;
-    cargarDatos_sucursales("DB//Sucursales.txt", lista_sucursales);
-    /*nodo<Sucursal>* actual_sucursal=lista_sucursales.obtener_cabecera();
-	while (actual_sucursal != nullptr) {
-	        cout << actual_sucursal->Dato.id_ciudad<<" "
-	        	<<actual_sucursal->Dato.id_sucursal<<" "
-	        	<<actual_sucursal->Dato.nombre_sucursal<<" "
-	        	<<actual_sucursal->Dato.dir_sucursal<<" "
-	        	<<actual_sucursal->Dato.barrio_sucursal<<" "
-	        	<<actual_sucursal->Dato.nombre_gerente<<endl;
-	    actual_sucursal = actual_sucursal->sig;
     }*/
     
     Lista<Hijo> lista_hijos;
@@ -80,6 +67,18 @@ int main(int argc, char** argv) {
         actual_empleado = actual_empleado->sig;
     }*/
     
+    Lista<Sucursal> lista_sucursales;
+    cargarDatos_sucursales("DB//Sucursales.txt", lista_sucursales, lista_empleados);
+    /*nodo<Sucursal>* actual_sucursal=lista_sucursales.obtener_cabecera();
+	while (actual_sucursal != nullptr) {
+	        cout << actual_sucursal->Dato.id_ciudad<<" "
+	        	<<actual_sucursal->Dato.id_sucursal<<" "
+	        	<<actual_sucursal->Dato.nombre_sucursal<<" "
+	        	<<actual_sucursal->Dato.dir_sucursal<<" "
+	        	<<actual_sucursal->Dato.barrio_sucursal<<" "
+	        	<<actual_sucursal->Dato.nombre_gerente<<endl;
+	    actual_sucursal = actual_sucursal->sig;
+    }*/
 	
 	clasificar_numHijos(lista_empleados,lista_hijos,1,3);
     empleadoxsucursal(lista_sucursales, lista_empleados);

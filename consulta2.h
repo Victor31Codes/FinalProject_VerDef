@@ -1,7 +1,6 @@
 #ifndef CONSULTA2_H
 #define CONSULTA2_H
 
-
 #include "sucursal.h"
 #include "lista.h"
 #include "hijo.h"
