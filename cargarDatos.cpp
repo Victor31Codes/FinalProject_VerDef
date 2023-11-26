@@ -10,6 +10,7 @@ using namespace std;
 
 int calcularEdad(string fecha_nac);
 Lista<Hijo> agregarHijos(int id_empleado,Lista<Hijo>& lista_hijos);
+Lista<Empleado> agregarEmpleados(int id_sucursal, Lista<Empleado>& lista_empleados);
 
 void cargarDatos_hijos(const string& nombreArchivo, Lista<Hijo>& lista_hijos){
 	ifstream archivo(nombreArchivo);
@@ -81,7 +82,7 @@ void cargarDatos_ciudades(const string& nombreArchivo, Lista<Ciudad>& lista_ciud
     }	
 }
 
-void cargarDatos_sucursales(const string& nombreArchivo, Lista<Sucursal>& lista_sucursales){
+void cargarDatos_sucursales(const string& nombreArchivo, Lista<Sucursal>& lista_sucursales, Lista<Empleado>& lista_empleados){
 	ifstream archivo(nombreArchivo);
     if (archivo.is_open()) {
         string linea;
@@ -89,7 +90,7 @@ void cargarDatos_sucursales(const string& nombreArchivo, Lista<Sucursal>& lista_
             istringstream iss(linea);
             Sucursal nueva_sucursal;
             if (iss >> nueva_sucursal.id_ciudad>>nueva_sucursal.id_sucursal>> nueva_sucursal.nombre_sucursal >> nueva_sucursal.dir_sucursal >> nueva_sucursal.barrio_sucursal>>nueva_sucursal.nombre_gerente) {
-                
+                nueva_sucursal.empleados=agregarEmpleados(nueva_sucursal.id_sucursal, lista_empleados);
 				lista_sucursales.insertar_final(nueva_sucursal);
             } else {
                 cerr << "No se pudieron leer los atributos correctamente." <<endl;
@@ -112,5 +113,18 @@ Lista<Hijo> agregarHijos(int id_empleado, Lista<Hijo>& lista_hijos){
 		actual_hijo=actual_hijo->sig;
 	}
 	return hijoxempleado;
+}
+
+Lista<Empleado> agregarEmpleados(int id_sucursal, Lista<Empleado>& lista_empleados){
+	Lista<Empleado> empleadoxsucursal;
+	nodo<Empleado>* actual_empleado = lista_empleados.obtener_cabecera();
+	while (actual_empleado!= nullptr) {
+		if(actual_empleado->Dato.id_sucursal==id_sucursal){
+			empleadoxsucursal.insertar_final(actual_empleado->Dato);
+			//cout<<id_sucursal<<"	"<<actual_empleado->Dato.id_sucursal<<" "<<actual_empleado->Dato.nombre_empleado<<endl;
+		}
+		actual_empleado=actual_empleado->sig;
+	}
+	return empleadoxsucursal;
 }
 

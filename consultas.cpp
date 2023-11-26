@@ -128,4 +128,19 @@ void empleadoxsucursal(Lista<Sucursal>& lista_sucursales, Lista<Empleado>& lista
 	}
 }
 
-
+void cantEmpleadosxSucursal(Lista<Sucursal> lista_sucursales){ //Consulta 2
+	int cont1=0, n;
+	cout<<"Ingrese el valor de la cantidad de empleados: ";
+	cin>>n;
+	nodo<Sucursal>* actual_sucursal=lista_sucursales.obtener_cabecera();
+	Lista<Empleado> empleados=actual_sucursal->Dato.empleados;
+	while (actual_sucursal != nullptr){
+		if(empleados.getTam()>n){
+			
+		}
+		actual_sucursal=actual_sucursal->sig;
+	}
+}
+/*4.	Número de sucursales en las que trabaja un número de personas superior a un número dado,
+mostrando la cantidad de personas de cada sucursal junto con el nombre del gerente, el nombre de
+la sucursal y el barrio en que se encuentra ubicada dicha sucursal. */
