@@ -6,7 +6,7 @@
 #include "empleado.h"
 #include "ciudad.h"
 #include "sucursal.h"
-
+#include "consulta2.h"
 
 using namespace std;
 
@@ -81,8 +81,9 @@ int main(int argc, char** argv) {
     }*/
     
 	
-	
+	clasificar_numHijos(lista_empleados,lista_hijos,1,3);
     empleadoxsucursal(lista_sucursales, lista_empleados);
     clasificarhijos(lista_hijos);
+    
     return 0;
 }
