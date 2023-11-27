@@ -7,6 +7,9 @@
 #include "ciudad.h"
 #include "sucursal.h"
 #include "consulta2.h"
+#include <locale.h>
+#include "Menu.cpp"
+#include "consultaVic.h"
 
 using namespace std;
 
@@ -83,5 +86,12 @@ int main(int argc, char** argv) {
 	//clasificar_numHijos(lista_empleados,lista_hijos,1,3);
     //empleadoxsucursal(lista_sucursales, lista_empleados);
 	cantEmpleadosxSucursal(lista_sucursales);
+//ConsultaVic::obtenerPersonasPorCiudad(lista_empleados, lista_ciudades, "Barranquilla");
+
+    setlocale(LC_ALL, "Spanish");
+    cout << "Inicializando .." << endl;
+    Menu menu;
+    
+    menu.MenuPrincipal();
     return 0;
 }
