@@ -18,7 +18,7 @@ void cargarDatos_empleados(const string& nombreArchivo, Lista<Empleado>& lista_e
 void cargarDatos_ciudades(const string& nombreArchivo, Lista<Ciudad>& lista_ciudades);
 void cargarDatos_sucursales(const string& nombreArchivo, Lista<Sucursal>& lista_sucursales,Lista<Empleado>& lista_empleados);
 void empleadoxsucursal(Lista<Sucursal>& lista_sucursales, Lista<Empleado>& lista_empleados);
-
+void cantEmpleadosxSucursal(Lista<Sucursal> lista_sucursales);
 
 int main(int argc, char** argv) {
 	
@@ -83,8 +83,9 @@ int main(int argc, char** argv) {
 	    actual_sucursal = actual_sucursal->sig;
     }*/
 	
-//	clasificar_numHijos(lista_empleados,lista_hijos,1,3);
-//    empleadoxsucursal(lista_sucursales, lista_empleados);
+	//clasificar_numHijos(lista_empleados,lista_hijos,1,3);
+    //empleadoxsucursal(lista_sucursales, lista_empleados);
+	cantEmpleadosxSucursal(lista_sucursales);
 //ConsultaVic::obtenerPersonasPorCiudad(lista_empleados, lista_ciudades, "Barranquilla");
 
     setlocale(LC_ALL, "Spanish");
@@ -92,6 +93,5 @@ int main(int argc, char** argv) {
     Menu menu;
     
     menu.MenuPrincipal();
-
     return 0;
 }

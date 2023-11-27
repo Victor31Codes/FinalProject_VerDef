@@ -129,18 +129,30 @@ void empleadoxsucursal(Lista<Sucursal>& lista_sucursales, Lista<Empleado>& lista
 }
 
 void cantEmpleadosxSucursal(Lista<Sucursal> lista_sucursales){ //Consulta 2
-	int cont1=0, n;
+	int contSuc=0,contEmp, n;
 	cout<<"Ingrese el valor de la cantidad de empleados: ";
 	cin>>n;
 	nodo<Sucursal>* actual_sucursal=lista_sucursales.obtener_cabecera();
-	Lista<Empleado> empleados=actual_sucursal->Dato.empleados;
 	while (actual_sucursal != nullptr){
-		if(empleados.getTam()>n){
-			
+		contEmp=0;
+		Lista<Empleado> list_empleado=actual_sucursal->Dato.empleados;
+		nodo<Empleado>* actual_empleado=list_empleado.obtener_cabecera();
+		
+		while (actual_empleado != nullptr){
+			if(actual_sucursal->Dato.id_sucursal==actual_empleado->Dato.id_sucursal){
+				contEmp=contEmp+1;
+			}
+		actual_empleado=actual_empleado->sig;
 		}
+		if(contEmp>n){
+			cout<<"Sucursal: "<<actual_sucursal->Dato.nombre_sucursal<<"	Barrio: "<<actual_sucursal->Dato.barrio_sucursal
+				<<" 	Gerente: "<<actual_sucursal->Dato.nombre_gerente<<endl;
+			cout<<"	La sucursal tiene: "<<contEmp<<" empleados."<<endl;
+			contSuc=contSuc+1;
+		}
+		
 		actual_sucursal=actual_sucursal->sig;
+		
 	}
+	cout<<"Hay "<<contSuc<<" con mas de "<<n<<" empleados.";
 }
-/*4.	Número de sucursales en las que trabaja un número de personas superior a un número dado,
-mostrando la cantidad de personas de cada sucursal junto con el nombre del gerente, el nombre de
-la sucursal y el barrio en que se encuentra ubicada dicha sucursal. */
