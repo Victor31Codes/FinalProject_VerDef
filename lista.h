@@ -23,6 +23,7 @@ public:
         fin = NULL;
     }
     int getTam() { return tam; }
+    void setTam(int nuevoTam) { tam = nuevoTam; } 
     bool lista_vacia() { return cab == NULL; }
     void insertar_pos(T dato, int pos);
     void insertar_final(T dato);
