@@ -33,7 +33,7 @@ class Menu {
 		while(programaAbierto) { // Bucle hasta que se escoja salir.
 //			system("cls");
 			SelectorMenu();
-			Opcion = LeerEntradas::leerEntrada(1,4);
+			Opcion = leerEntrada(1,4);
 			
 			switch (Opcion) {
 				case 1: {
@@ -44,36 +44,36 @@ class Menu {
 				case 2: {
 //					system("cls");
 					SubMenu_RealizarConsultas();
-					Opcion = LeerEntradas::leerEntrada(1,7);
+					Opcion = leerEntrada(1,7);
 					
 					switch (Opcion) {
 						case 1: {
-							cout << "Numero total de personas que trabajan en una sucursal dada, clasificandolos por rangos de edades de los hijos de la siguiente forma: sin hijos, de 0-5, 6-10, 11-18, mayor de 18.";
+							
 //							system("Pause");
 							break;
 						}
 						case 2: {
-							cout << "Listado de los nombres y apellidos de aquellos que tienen un número de hijos dado (en rangos), clasificándolos por ciudad y país en que viven.";
+							
 //							system("Pause");
 							break;
 						}
 						case 3: {
-							cout << "Nombre y apellidos de las personas que viven en una ciudad dada,  clasificándolos por ciudad de nacimiento y actividad laboral.";
+							
 //							system("Pause");
 							break;
 						}
 						case 4: {
-							cout << "Numero de sucursales en las que trabaja un numero de personas superior a un número dado, mostrando la cantidad de personas de cada sucursal junto con el nombre del gerente, el nombre de la sucursal y el barrio en que se encuentra ubicada dicha sucursal.";
+							
 //							system("Pause");
 							break;
 						}
 						case 5: {
-							cout << "Obtener el numero de hombres y el número de mujeres que trabajan en las diferentes sucursales, clasificando la información por país y ciudad, mostrando el nombre de la sucursal y del gerente.";
+							
 //							system("Pause");
 							break;
 						}
 						case 6: {
-							cout << "Dado un rango de edad y una actividad laborar mostrar la lista de trabajadores de esa edad, clasificados por barrio y sucursal a la que pertenecen.";
+							
 //							system("Pause");
 							break;
 						}
@@ -90,7 +90,7 @@ class Menu {
 					
 //					system("cls");
 					SubMenu_CRUD();
-					Opcion = LeerEntradas::leerEntrada(1,3);
+					Opcion = leerEntrada(1,3);
 					
 					switch (Opcion) {
 						case 1: {
@@ -153,14 +153,15 @@ class Menu {
 	}
 	
 	void SubMenu_RealizarConsultas(){
-		cout << "Realizar una consulta" << endl;
+		cout << "Selecciona una opcion: " << endl;
 	    cout << "--------------------------------------------------" << endl;
-	    cout << "1. Numero total de personas que trabajan en una sucursal dada." << endl;
-	    cout << "2. Listado de los nombres y apellidos de aquellos que tienen cierto número de hijos." << endl;
-	    cout << "3. Nombre y apellidos de las personas que viven en una ciudad dada,  clasificándolos por ciudad de nacimiento y actividad laboral." << endl;
-	    cout << "4. Numero de sucursales en las que trabaja un numero de personas superior a un número dado, mostrando la cantidad de personas de cada sucursal junto con el nombre del gerente, el nombre de la sucursal y el barrio en que se encuentra ubicada dicha sucursal." << endl;
-	    cout << "5. Obtener el numero de hombres y el número de mujeres que trabajan en las diferentes sucursales, clasificando la información por país y ciudad, mostrando el nombre de la sucursal y del gerente." << endl;
-	    cout << "6. Dado un rango de edad y una actividad laborar mostrar la lista de trabajadores de esa edad, clasificados por barrio y sucursal a la que pertenecen." << endl;
+	    cout << "1. Consulta #1: \nNumero total de personas que trabajan en una sucursal dada, clasificandolos por \nrangos de edades de los hijos de la siguiente forma: sin hijos, de 0-5, 6-10, 11-18, mayor de 18.\n" << endl;
+	    cout << "2. Consulta #2: \nListado de los nombres y apellidos de aquellos que tienen un número de \nhijos dado (en rangos), clasificándolos por ciudad y país en que viven.\n" << endl;
+	    cout << "3. Consulta #3: \nNombre y apellidos de las personas que viven en una ciudad \ndada, clasificándolos por ciudad de nacimiento y actividad laboral.\n" << endl;
+	    cout << "4. Consulta #4: \nNumero de sucursales en las que trabaja un numero de personas superior a un número dado, \nmostrando la cantidad de personas de cada sucursal junto con el nombre del gerente, el nombre \nde la sucursal y el barrio en que se encuentra ubicada dicha sucursal.\n" << endl;
+	    cout << "5. Consulta #5: \nObtener el numero de hombres y el número de mujeres que trabajan en las diferentes \nsucursales, clasificando la información por país y ciudad, \nmostrando el nombre de la sucursal y del gerente.\n" << endl;
+	    cout << "6. Consulta #6: \nDado un rango de edad y una actividad laborar mostrar la lista de \ntrabajadores de esa edad, clasificados por barrio y sucursal a la que pertenecen.\n" << endl;
+	    
 	    cout << "7. Salir" << endl;
 	}
 	

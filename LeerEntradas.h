@@ -2,9 +2,9 @@
 #define LEERENTRADAS_H
 
 #include <iostream>
+#include <limits>
 
-namespace LeerEntradas {
-    int leerEntrada(int min, int max);
-}
+int leerEntrada(int min, int max);
 
 #endif
+
